@@ -8,7 +8,7 @@ namespace BulkyWeb_MVC.Data
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-        DbSet<Category> Categories { get; set; }
+        public DbSet<Category> Categories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Category>().HasData(
